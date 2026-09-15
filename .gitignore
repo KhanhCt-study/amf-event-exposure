@@ -1,0 +1,5 @@
+/bin/
+/amf-event-exposure
+*.out
+.env
+implementation-notes.md
