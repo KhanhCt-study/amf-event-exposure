@@ -104,19 +104,4 @@ go test ./...
 Hiện có unit test cho router, `api` response writer, subscription usecase và
 notifier — tất cả dùng manual mocks, không mockgen.
 
-## Trạng thái theo feature branch
 
-| Branch | Trạng thái |
-|--------|------------|
-| 1. project-setup | ✅ go.mod, config, main.go, database.go |
-| 2. domain-models | ✅ entity, interfaces, errors |
-| 3. api-framework | ✅ router, api package, recovery middleware, router_test |
-| 4. db-migration | ✅ migration + repository (CAS) — ⚠️ chưa có contract test testcontainers |
-| 5. api-create-subscription | ✅ handler + usecase + validation |
-| 6. api-modify-subscription | ✅ JSON Patch trong phạm vi prototype |
-| 7. api-delete-subscription | ✅ CAS delete |
-| 8. notification-sender | ✅ client + notifier + hook kích hoạt |
-| 9. unit-tests | 🟡 đã có cho usecase/api/router; còn thiếu handler, validator, config, repo |
-| 10. integration-tests | ❌ chưa làm (testcontainers PostgreSQL) |
-
-Chi tiết giả định và điểm cần rà lại: xem `docs/implementation-notes.md`.
